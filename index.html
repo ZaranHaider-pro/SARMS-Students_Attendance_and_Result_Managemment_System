@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARMS | Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section (Visible after login) -->
+    <header id="app-header" class="hidden">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i> SARMS
+        </div>
+        <div class="user-info">
+            <span id="user-display-name">User</span>
+            <span id="user-role-badge" class="role-badge">Role</span>
+            <button id="logout-btn" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Login View -->
+        <div id="login-view" class="login-wrapper">
+            <div class="login-card">
+                <div class="login-header">
+                    <h2>SARMS Login</h2>
+                    <p>Secure Access Portal</p>
+                </div>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Enter email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-icon">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id="password" placeholder="Enter password" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Login</button>
+                </form>
+                <div class="login-footer">
+                    <small>Default Admin: <strong>admin@sarms.edu</strong> / <strong>admin123</strong></small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard View -->
+        <div id="dashboard-view" class="hidden">
+            <div class="dashboard-grid">
+                <!-- Sidebar -->
+                <aside class="sidebar" id="sidebar-nav">
+                    <!-- Injected by JS -->
+                </aside>
+
+                <!-- Main Content -->
+                <main class="main-content" id="main-content">
+                    <!-- Injected by JS -->
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Universal Modal -->
+    <div id="modal-overlay" class="hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 id="modal-title">Modal Title</h3>
+                <button id="close-modal" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="modal-body" class="modal-body">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
